@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Plant Paradise</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="shortcut icon" href="Assets/Logo.jpg" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- HEADER SECTION -->
+  <header class="header">
+    <div class="logo">
+      <img class="logo1" src="Assets/Logo.jpg" alt="Logo" />
+      <h1>Plant Paradise</h1>
+    </div>
+
+    <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search your plant by name" />
+  <button class="search-btn" id="searchBtn">
+    <img src="Assets/search-icon.jpg" alt="Search">
+  </button>
+</div>
+
+
+    <div class="header-icons">
+      <span title="Ask Expert">💬</span>
+      <span title="My Garden">🪴</span>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Grow Green, Live Clean 🌿</h1>
+      <p>Discover plant care guides, tips, and growing secrets to keep your greens thriving every day.</p>
+      <a href="#categories" target="_blank" class="hero-btn">Explore Plants</a>
+    </div>
+    <div class="hero-image">
+    <img src="Assets/background.jpg" alt="Plants Growing">
+  </div>
+  </section>
+
+  <!-- CATEGORY NAVBAR SECTION -->
+  <section id="categories" class="category-section">
+    <h2>Explore by Category 🌱</h2>
+    <p>Find plant care guides and growth tips by type</p>
+
+    <div class="category-grid">
+      <a href="AllPlants.html" target="_blank" class="category-card">
+        <img src="Assets/AllPlants.jpeg" alt="All Plants">
+        <p>All Plants</p>
+      </a>
+
+      <a href="PlantCare.html" target="_blank" class="category-card">
+        <img src="Assets/PlantCare.jpg" alt="Plant Care Tips">
+        <p>Plant Care Tips</p>
+      </a>
+
+      <a href="IndoorPlant.html" target="_blank" class="category-card">
+        <img src="Assets/IndoorP.jpg" alt="Indoor Plants">
+        <p>Indoor Plants</p>
+      </a>
+
+      <a href="OutdoorPlant.html" target="_blank" class="category-card">
+        <img src="Assets/OutdoorP.jpg" alt="Outdoor Plants">
+        <p>Outdoor Plants</p>
+      </a>
+
+      <a href="FloweringPlant.html" target="_blank" class="category-card">
+        <img src="Assets/FloweringP.png" alt="Flowering Plants">
+        <p>Flowering Plants</p>
+      </a>
+
+      <a href="MedicinalPlant.html" target="_blank" class="category-card">
+        <img src="Assets/Medicinal.jpg" alt="Medicinal Plants">
+        <p>Medicinal Plants</p>
+      </a>
+
+      <a href="FertilizerSoil.html" target="_blank" class="category-card">
+        <img src="Assets/Fertilizer.jpg" alt="Fertilizer & Soil">
+        <p>Fertilizer & Soil</p>
+      </a>
+
+      <a href="WteringGuide.html" target="_blank" class="category-card">
+        <img src="Assets/watering.jpg" alt="Watering Guide">
+        <p>Watering Guide</p>
+      </a>
+
+      <a href="SunlightEnvironment.html" target="_blank" class="category-card">
+        <img src="Assets/sunlight.jpg" alt="Sunlight Guide">
+        <p>Sunlight Guide</p>
+      </a>
+    </div>
+  </section>
+
+  <!--  POPULAR PLANTS SECTION -->
+<section class="popular-plants">
+  <h2>🌿 Popular Plants</h2>
+  <div class="plant-grid">
+    <div class="plant-card">
+      <img src="Assets/snake-plants.jpg" alt="Snake Plant">
+      <h3>Snake Plant</h3>
+      <p>Low maintenance and air-purifying.</p>
+    </div>
+    <div class="plant-card">
+      <img src="Assets/peace-lily.jpg" alt="Peace Lily">
+      <h3>Peace Lily</h3>
+      <p>Loves indirect sunlight and moist soil.</p>
+    </div>
+    <div class="plant-card">
+      <img src="Assets/alovera.jpg" alt="Aloe Vera">
+      <h3>Aloe Vera</h3>
+      <p>Healing properties and easy to grow.</p>
+    </div>
+    <div class="plant-card">
+      <img src="Assets/Monstera.jpg" alt="Monstera">
+      <h3>Monstera</h3>
+      <p>Tropical beauty with unique leaves.</p>
+    </div>
+  </div>
+</section>
+
+<!--  FEATURED PLANT SECTION -->
+<section class="featured-plant">
+  <div class="featured-content">
+    <div class="featured-image">
+      <img src="Assets/Monstera.jpg" alt="Monstera Deliciosa">
+    </div>
+    <div class="featured-text">
+      <h2> Featured Plant of the Month</h2>
+      <h3>Monstera Deliciosa</h3>
+      <p>
+        Known as the “Swiss Cheese Plant,” Monstera Deliciosa brings tropical charm to any space.
+        Thrives in bright, indirect sunlight and loves weekly watering.
+      </p>
+      <button>Learn More</button>
+    </div>
+  </div>
+</section>
+<section class="plant-day-section">
+  <h2> Plant of the Day</h2>
+  <div id="plantOfDay"class="plant-day-card"></div>
+</section>
+
+<!--  NEWSLETTER SECTION -->
+<section class="newsletter">
+  <h2>Join Our Green Community 🌱</h2>
+  <p>Get plant care tips, special offers, and inspiration every week!</p>
+  <form>
+    <input type="email" placeholder="Enter your email" required>
+    <button type="submit">Join</button>
+  </form>
+</section>
+
+<!--  TESTIMONIALS SECTION -->
+<section class="testimonials">
+  <h2>💬 What Our Plant Lovers Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial-card">
+      <p>“My Peace Lily flourished with your watering guide!”</p>
+      <h4>- Riya Sharma</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>“Beautiful website and so much plant knowledge!”</p>
+      <h4>- Aarav Patel</h4>
+    </div>
+    <div class="testimonial-card">
+      <p>“Got my Aloe growing fast — loved the easy tips!”</p>
+      <h4>- Neha Verma</h4>
+    </div>
+  </div>
+</section>
+
+<!--  FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div class="footer-left">
+      <h3>Plant Paradise</h3>
+      <p>Made with 💚 in India</p>
+    </div>
+    
+    <div class="footer-socials">
+      <a href="#">🌐</a>
+      <a href="#">📸</a>
+      <a href="#">📘</a>
+    </div>
+  </div>
+</footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,485 @@
+/* === GLOBAL STYLES === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fff9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* === HEADER / NAVBAR === */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d4f3d6;
+  padding: 15px 60px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  color: #2e7d32;
+  font-weight: 700;
+}
+
+/* Search Bar */
+.search-container {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 5px 15px;
+  width: 380px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-container input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  padding: 8px;
+}
+
+.search-btn img {
+  width: 22px;
+  height: 22px;
+  cursor: pointer;
+}
+
+/* Header Icons */
+.header-icons span {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-left: 20px;
+  transition: transform 0.2s ease;
+}
+
+.header-icons span:hover {
+  transform: scale(1.2);
+}
+
+/* === HERO SECTION === */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 70px 8%;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("Assets/background.jpg") center/cover no-repeat;
+  height: 80vh;
+}
+
+.hero-content {
+  max-width: 50%;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  color: #2e7d32;
+  margin-bottom: 15px;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #4b4b4b;
+  margin-bottom: 25px;
+}
+
+.hero-btn {
+  display: inline-block;
+  background-color: #4caf50;
+  color: white;
+  text-decoration: none;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.hero-btn:hover {
+  background-color: #2e7d32;
+  transform: translateY(-3px);
+}
+
+.hero-image img {
+  width: 450px;
+  border-radius: 20px;
+}
+/* === CATEGORY SECTION === */
+.category-section {
+  padding: 60px 8%;
+  background-color: #f6fdf7;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+.category-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.category-section h2 {
+  color: #2e7d32;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.category-section p {
+  color: #555;
+  font-size: 1rem;
+  margin-bottom: 40px;
+}
+
+/* === Category Grid === */
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+  gap: 25px;
+  justify-items: center;
+  align-items: center;
+}
+
+/* === Category Cards === */
+.category-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  text-align: center;
+  padding: 25px 15px;
+  width: 120px;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+
+.category-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+/* === Circular Images === */
+.category-card img {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #81c784;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* === Category Text === */
+.category-card p {
+  color: #2e7d32;
+  font-weight: 600;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* === Responsive Adjustment === */
+@media (max-width: 1200px) {
+  .category-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .category-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* 🌿 GENERAL */
+section {
+  padding: 60px 8%;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+  font-size: 2rem;
+  color: #22543d;
+  margin-bottom: 40px;
+}
+
+/* 🌿 POPULAR PLANTS */
+.popular-plants .plant-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.plant-card {
+  background: #f6fff8;
+  border-radius: 15px;
+  padding: 15px;
+  width: 22%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.plant-card:hover {
+  transform: translateY(-5px);
+}
+
+.plant-card img {
+  width: 100%;
+  border-radius: 12px;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* 🌿 FEATURED PLANT */
+.featured-plant {
+  background: #e6f5ea;
+}
+
+.featured-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.featured-image img {
+  width: 320px;
+  border-radius: 20px;
+}
+
+.featured-text {
+  text-align: left;
+  max-width: 450px;
+}
+
+.featured-text h3 {
+  color: #2f855a;
+  margin-top: 10px;
+}
+
+.featured-text button {
+  margin-top: 20px;
+  background: #2f855a;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.featured-text button:hover {
+  background: #276749;
+}
+/* Featured Plant of the Day Section */
+.plant-day-section {
+  text-align: center;
+  padding: 50px 0;
+  background: #f8fff8;
+  border-top: 2px solid #d4e8d4;
+}
+
+.plant-day-section h2 {
+  font-size: 2rem;
+  color: #2e7d32;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.plant-day-card {
+  display: inline-block;
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  width: 340px;
+  transition: all 0.3s ease-in-out;
+}
+
+.plant-day-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.plant-day-card img {
+  width: 100%;
+  height: 230px; /* ✅ good for laptop */
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 15px;
+}
+
+.plant-day-card h3 {
+  font-size: 1.4rem;
+  color: #388e3c;
+  margin-bottom: 10px;
+}
+
+.plant-day-card p {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+/* 🌿 NEWSLETTER */
+.newsletter {
+  background: #f0fff4;
+  border-radius: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.newsletter form {
+  margin-top: 20px;
+}
+
+.newsletter input {
+  padding: 12px;
+  width: 60%;
+  border-radius: 8px;
+  border: 1px solid #c6f6d5;
+}
+
+.newsletter button {
+  background: #38a169;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.newsletter button:hover {
+  background: #2f855a;
+}
+
+/* 🌿 TESTIMONIALS */
+.testimonial-grid {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+.testimonial-card {
+  background: #f6fff8;
+  border-radius: 15px;
+  padding: 20px;
+  width: 30%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.testimonial-card p {
+  font-style: italic;
+  color: #22543d;
+}
+
+/* Special */
+/* Search Suggestion Box */
+.suggestion-box {
+  list-style: none;
+  margin: 5px 0 0;
+  padding: 0;
+  position: absolute;
+  background: white;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  z-index: 10;
+}
+.suggestion-box li {
+  padding: 8px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+.suggestion-box li:hover {
+  background: #e6f4ea;
+  color: #2f855a;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  background: #2f855a;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+/* Back to Top Button */
+#backToTop {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: none;
+  background: #38a169;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+#backToTop:hover {
+  background: #276749;
+  transform: scale(1.1);
+}
+
+/* 🌿 FOOTER */
+.footer {
+  background: #22543d;
+  color: white;
+  padding: 40px 8%;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.footer-socials a {
+  font-size: 1.4rem;
+  margin: 0 8px;
+}
