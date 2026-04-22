@@ -1,9 +1,21 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background-color: #f8fff9;
   color: #333;
   margin: 0;
   padding: 0;
+  line-height: 1.6;
+  overflow-x: hidden;
 }
 
 .header {
@@ -11,15 +23,15 @@ body {
   padding: 3rem 1rem;
   background: linear-gradient(135deg, #95d5b2, #b7e4c7);
   color: #1b4332;
+}
 
-  h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-  }
+.header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
 
-  p {
-    font-size: 1.1rem;
-  }
+.header p {
+  font-size: 1.1rem;
 }
 
 .plant-list {
@@ -36,51 +48,58 @@ body {
   border-radius: 20px;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-  &:hover {
-    transform: scale(1.02);
-  }
+.plant:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.14);
+}
 
-  img {
-    width: 45%;
-    height: 280px;
-    object-fit: cover;
-  }
+.plant img {
+  width: 45%;
+  height: 280px;
+  object-fit: cover;
+  display: block;
+  flex-shrink: 0;
+}
 
-  .plant-details {
-    padding: 1.5rem;
-    text-align: left;
+.plant .plant-details {
+  padding: 1.5rem;
+  text-align: left;
+  flex: 1;
+}
 
-    h2 {
-      color: #2d6a4f;
-      margin-top: 0;
-    }
+.plant .plant-details h2 {
+  color: #2d6a4f;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+  font-size: 1.8rem;
+}
 
-    .desc {
-      font-size: 1rem;
-      margin: 0.5rem 0 1rem;
-      color: #555;
-    }
+.plant .plant-details .desc {
+  font-size: 1rem;
+  margin: 0.5rem 0 1rem;
+  color: #555;
+}
 
-    .info {
-      list-style: none;
-      padding: 0;
+.plant .plant-details .info {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-      li {
-        margin: 0.4rem 0;
-        font-size: 0.95rem;
+.plant .plant-details .info li {
+  margin: 0.4rem 0;
+  font-size: 0.95rem;
+}
 
-        strong {
-          color: #1b4332;
-        }
-      }
-    }
-  }
+.plant .plant-details .info li strong {
+  color: #1b4332;
+}
 
-  &:nth-child(even) {
-    flex-direction: row-reverse;
-  }
+.plant:nth-child(even) {
+  flex-direction: row-reverse;
 }
 
 .footer {
@@ -89,10 +108,121 @@ body {
   background-color: #d8f3dc;
   color: #1b4332;
   font-size: 0.9rem;
+  margin-top: 2rem;
+}
 
-  a {
-    color: #1b4332;
-    font-weight: 600;
-    text-decoration: none;
+.footer a {
+  color: #1b4332;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 992px) {
+  .plant-list {
+    padding: 2rem 6%;
+  }
+
+  .plant {
+    flex-direction: column;
+  }
+
+  .plant:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .plant img {
+    width: 100%;
+    height: 260px;
+  }
+
+  .plant .plant-details {
+    padding: 1.3rem;
+    text-align: center;
+  }
+
+  .plant .plant-details h2 {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2.2rem 1rem;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .header p {
+    font-size: 1rem;
+  }
+
+  .plant-list {
+    gap: 2rem;
+    padding: 1.5rem 5%;
+  }
+
+  .plant {
+    border-radius: 16px;
+  }
+
+  .plant img {
+    height: 220px;
+  }
+
+  .plant .plant-details {
+    padding: 1.1rem;
+  }
+
+  .plant .plant-details h2 {
+    font-size: 1.4rem;
+  }
+
+  .plant .plant-details .desc,
+  .plant .plant-details .info li {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.7rem;
+  }
+
+  .header p {
+    font-size: 0.95rem;
+  }
+
+  .plant-list {
+    padding: 1.2rem 4%;
+  }
+
+  .plant img {
+    height: 200px;
+  }
+
+  .plant .plant-details {
+    padding: 1rem;
+  }
+
+  .plant .plant-details h2 {
+    font-size: 1.25rem;
+  }
+
+  .plant .plant-details .desc,
+  .plant .plant-details .info li {
+    font-size: 0.9rem;
+  }
+
+  .footer {
+    font-size: 0.85rem;
+    padding: 0.9rem;
   }
 }
